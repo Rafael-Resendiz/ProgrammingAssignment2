@@ -37,6 +37,8 @@ really a list containing a function to
 3.  set the value of the mean
 4.  get the value of the mean
 
+<!-- -->
+
 
 makeCacheMatrix <- function(x = matrix()) {
 
