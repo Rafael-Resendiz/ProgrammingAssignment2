@@ -8,8 +8,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
+### Introduction
 
-## Task obtaining the Inverse of a Matrix 
 This second programming assignment will require you to write an R
 function that is able to cache potentially time-consuming computations.
 For example, taking the mean of a numeric vector is typically a fast
@@ -40,9 +40,21 @@ really a list containing a function to
 <!-- -->
 
 
-makeCacheMatrix <- function(x = matrix()) {
+    makeVector <- function(x = numeric()) {
+            m <- NULL
+            set <- function(y) {
+                    x <<- y
+                    m <<- NULL
+            }
+            get <- function() x
+            setmean <- function(mean) m <<- mean
+            getmean <- function() m
+            list(set = set, get = get,
+                 setmean = setmean,
+                 getmean = getmean)
+    }
 
-}
+
 
 
 ## Write a short comment describing this function
