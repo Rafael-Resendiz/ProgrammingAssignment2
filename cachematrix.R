@@ -140,13 +140,21 @@ cacheSolve <- function(x, ...) {
 ## In this part of the work, wrote the possible outcome of the functions, 
 ## waiting for its execution provide the expected result.
 
+# First Example
+	
+d <- matrix(c(1:4),2)
+e <- makeCacheMatrix(d)
+e$get()
+cacheSolve(e)
 
 	
-	# a<-makeCacheMatrix()
-	# a$set(matrix(1:4,2))
-	# cacheSolve(a)
-	
-# Example
+# Second example
+
+j <- matrix(c(5:8),2)
+k <- makeCacheMatrix(j)
+cacheSolve(k)
+
+# Third example
 
 	a <- makeCacheMatrix(matrix(1:4,2))
 		a$get()
